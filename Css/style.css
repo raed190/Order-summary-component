@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Pale-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
+}
+.desktop {
+  width: 100%;
+  display: none;
+}
+.mobile {
+  width: 100%;
+  display: none;
+}
+.card {
+  border-radius: 10px;
+  background-color: var(--Very-pale-blue);
+  width: 350px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card img {
+  max-width: 100%;
+}
+.card .content {
+  padding: 20px;
+  text-align: center;
+}
+.card .content h3 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+  font-size: 20px;
+}
+.card .content p {
+  margin: 20px auto;
+  color: var(--Desaturated-blue);
+  font-size: 16px;
+  width: 275px;
+  line-height: 1.5;
+}
+.card .content .plan {
+  background-color: hsl(225deg 48% 95%);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card .content .plan .price span {
+  display: block;
+}
+.card .content .plan .price span:first-child {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.card .content .plan .price span:last-child {
+  color: var(--Desaturated-blue);
+  font-size: 15px;
+}
+.card .content .plan a {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.card .content .plan a:hover {
+  color: var(--Desaturated-blue);
+  text-decoration: none;
+}
+.card button {
+  display: block;
+  background-color: var(--Bright-blue);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  color: var(--Very-pale-blue);
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 2px 6px 13px 0px var(--Desaturated-blue);
+}
+.card button:hover {
+  opacity: 0.7;
+}
+.order {
+  display: block;
+  color: var(--Desaturated-blue);
+  text-decoration: none;
+  font-weight: 900;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+.order:hover {
+  color: var(--Dark-blue);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 100px;
+}
+@media (min-width: 375px) {
+  .desktop {
+    display: block;
+  }
+  .card .content p {
+    width: 300px;
+  }
+  .card .content .plan .price {
+    flex: 1;
+  }
+  .card .content .plan .link {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+@media (max-width: 374px) {
+  .mobile {
+    display: block;
+  }
+}
