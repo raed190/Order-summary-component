@@ -53,7 +53,7 @@ body {
   font-size: 20px;
 }
 .card .content p {
-  margin: 20px auto;
+  margin: 30px auto;
   color: var(--Desaturated-blue);
   font-size: 16px;
   width: 275px;
@@ -66,7 +66,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .card .content .plan .price span {
@@ -113,7 +113,7 @@ body {
   color: var(--Desaturated-blue);
   text-decoration: none;
   font-weight: 900;
-  margin: 20px 0;
+  margin: 30px 0;
   transition: 0.3s;
 }
 .order:hover {
@@ -122,11 +122,14 @@ body {
 
 .attribution {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
 }
 @media (min-width: 375px) {
   .desktop {
     display: block;
+  }
+  .card {
+    width: 400px;
   }
   .card .content p {
     width: 300px;
