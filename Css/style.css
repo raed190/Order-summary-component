@@ -15,11 +15,13 @@
 
 body {
   background-color: var(--Pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+}
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Red Hat Display", sans-serif;
 }
 .desktop {
   width: 100%;
